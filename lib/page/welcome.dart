@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_7/Widget/custom_Elevated_Button.dart';
+import 'package:flutter_application_7/page/login.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Welcome extends StatelessWidget {
@@ -44,7 +45,14 @@ class Welcome extends StatelessWidget {
                         children: [
                           CustomElevatedButton(
                             text: "Login",
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => loginPage(),
+                                ),
+                              );
+                            },
                             backgroundColor: Colors.purple,
                             textColor: Colors.white,
                             horizontalPadding: 132,
